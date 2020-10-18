@@ -1,0 +1,85 @@
+body {
+    background-color: #e6e8e6;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h1{
+    margin-top: 0px;
+    padding: 23px;
+    text-align: center;
+    background-color: #8e71f5;
+}
+
+#value{
+    width:400px;
+}
+#btnClear{
+    background-color: #5a5a5a ;
+    padding: 5px 25px;
+    border: none;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+}
+#btnClear:hover{
+    background-color:  #8e71f5;
+}
+
+.Buttons {
+    position: absolute;
+    height: 25px;
+    font-family: Arial, Helvetica;
+    font-size: 11pt;
+    color: #fff9f9;
+}
+
+.LblInfoGray {
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 10pt;
+    color: #5a5a5a;
+    position: relative;
+    text-align: left;
+    padding-top: 4px;
+}
+
+.TableClass {
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 12.0pt;
+    height: 100px;
+    background-color: #bfbdbd;
+}
+
+.BaseColumn {
+    text-align: center;
+    background-color: #bfbdbd;
+}
+
+.AlphaColumn {
+    width: 300px;
+    height: 22px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 0.2px solid #8c8c8c;
+}
+
+.AlphaColumn:hover{
+    background-color:darkgrey ;
+    border: 1px solid darkgrey;
+}
+
+
+footer p{
+    padding: 10px;;
+    background-color: #8e71f5;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a{
+    text-decoration: none;
+    color:black;
+}
