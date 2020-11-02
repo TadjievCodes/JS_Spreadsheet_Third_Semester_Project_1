@@ -1,10 +1,10 @@
 //function clikc the enter
-function clikcEnter(ref){
+function clickEnter(ref){
     if (window.event.keyCode === 13){
-       var tbValue = document.getElementById(ref.id).value;
-        document.getElementById(`${GLOBALROW}_${GLOBALCOLLUMN}`).innerHTML = tbValue;
-        //put the index into array
-        tblArray[GLOBALROW - 1][GLOBALCOLLUMN - 1] = tbValue;
+        let tableValue = document.getElementById(ref.id).value;
+        document.getElementById(`${GLOBALROW}_${GLOBALCOLLUMN}`).innerHTML = tableValue;
+        // put the index into array here
+        tableArray[GLOBALROW - 1][GLOBALCOLLUMN - 1] = tableValue;
         calculateCell(GLOBALROW - 1, GLOBALCOLLUMN - 1);
         recalculate();
     }
@@ -22,6 +22,6 @@ function clickCell(clickCell) {
     //change the color of the clicked cell
     clickCell.style.backgroundColor = "#a4cffc";
     //output the value to the input field
-    document.getElementById('value').value = tblArray[GLOBALROW - 1][GLOBALCOLLUMN - 1];
+    document.getElementById('value').value = tableArray[GLOBALROW - 1][GLOBALCOLLUMN - 1];
     
 }

@@ -1,19 +1,19 @@
 //Create an aray global array
-var tblArray = [];
+let tableArray = [];
 
 //Create global variables to store rows and columns info
-var GLOBALROW;
-var GLOBALCOLLUMN;
+let GLOBALROW;
+let GLOBALCOLLUMN;
 
 const TBLROWS = 20;
 const TBLCOLUMNS = 10;
 //create a 2D array 
 for (var i = 0; i < TBLROWS; i++){
-    tblArray[i] = [];
+    tableArray[i] = [];
         for (var j = 0; j < TBLCOLUMNS; j++)
-    tblArray[i][j] = "";
+    tableArray[i][j] = "";
     }
-    console.log(tblArray);
+    console.log(tableArray);
 
     
 //Formula to 
@@ -36,7 +36,7 @@ function recalculate(){
 for (var i = 0; i < TBLROWS; i++){
 for (var j = 0; j < TBLCOLUMNS; j++){
     // check to see if table element is a formula
-    if (tblArray[i][j].indexOf("=SUM") !== -1){
+    if (tableArray[i][j].indexOf("=SUM") !== -1){
         calculateCell(i, j);           
     }
 }
@@ -45,7 +45,7 @@ for (var j = 0; j < TBLCOLUMNS; j++){
 
 //function calculate
 function calculateCell(row, column){
-    var tokenArray = getFormula(tblArray[row][column]);
+    var tokenArray = getFormula(tableArray[row][column]);
 
 
     if (tokenArray !== null){
@@ -65,8 +65,8 @@ function calculateCell(row, column){
 
     for (var i = fromRowIndex; i <= toRowIndex; i++){
         for (var j = fromColIndex; j <= toColIndex; j++){
-            if (isFloat(tblArray[i][j]))
-                sumTotal += parseFloat(tblArray[i][j]);
+            if (isFloat(tableArray[i][j]))
+                sumTotal += parseFloat(tableArray[i][j]);
         }
     }
 

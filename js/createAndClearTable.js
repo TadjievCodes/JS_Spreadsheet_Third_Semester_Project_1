@@ -1,16 +1,16 @@
-var rows = 20;
-var columns  = 10;
+let rows = 20;
+let columns  = 10;
 
 
 function clearSpreadsheet(){
     createSpreadsheet();
     document.getElementById('value').value = " ";
     for (var i = 0; i < TBLROWS; i++){
-    tblArray[i] = [];
+    tableArray[i] = [];
         for (var j = 0; j < TBLCOLUMNS; j++)
-    tblArray[i][j] = "";
+    tableArray[i][j] = "";
     }
-    console.log(tblArray);
+    console.log(tableArray);
 
 }
 
