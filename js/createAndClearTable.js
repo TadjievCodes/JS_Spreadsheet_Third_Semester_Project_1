@@ -1,8 +1,8 @@
 let rows = 20;
 let columns = 10;
 
-function clearSpreadsheet() {
-    createSpreadsheet();
+function clearSpreadsheetExcel() {
+    createSpreadsheetExcel();
     document.getElementById('value').value = " ";
     for (var i = 0; i < TBLROWS; i++) {
         tableArray[i] = [];
@@ -11,26 +11,26 @@ function clearSpreadsheet() {
     console.log(tableArray);
 }
 
-function createSpreadsheet() {
+function createSpreadsheetExcel() {
     var columns = 10;
-    document.getElementById("SpreadsheetTable").innerHTML = buildTable(rows, columns);
+    document.getElementById("SpreadsheetTable").innerHTML = buildingTable(rows, columns);
 }
 
-function buildTable(rows, columns) {
-    var divHTML = "<table border='1' cellpadding='0' cellspacing='0' class='TableClass'>";
-    divHTML += "<tr><th></th>";
+function buildingTable(rows, columns) {
+    var divHTMLOutput = "<table border='1' cellpadding='0' cellspacing='0' class='TableClass'>";
+    divHTMLOutput += "<tr><th></th>";
 
-    for (var j = 0; j < columns; j++) divHTML += "<th>" + String.fromCharCode(j + 65) + "</th>";
-    divHTML += "</tr>";
+    for (var j = 0; j < columns; j++) divHTMLOutput += "<th>" + String.fromCharCode(j + 65) + "</th>";
+    divHTMLOutput += "</tr>";
 
     for (var i = 1; i <= rows; i++) {
-        divHTML += "<tr>";
-        divHTML += "<td id='" + i + "_0' class='BaseColumn'>" + i + "</td>";
+        divHTMLOutput += "<tr>";
+        divHTMLOutput += "<td id='" + i + "_0' class='BaseColumn'>" + i + "</td>";
 
-        for (var j = 1; j <= columns; j++) divHTML += "<td id='" + i + "_" + j + "' class='AlphaColumn' onclick='clickCell(this)'></td>";
+        for (var j = 1; j <= columns; j++) divHTMLOutput += "<td id='" + i + "_" + j + "' class='AlphaColumn' onclick='clickCell(this)'></td>";
 
-        divHTML += "</tr>";
+        divHTMLOutput += "</tr>";
     }
-    divHTML += "</table>";
-    return divHTML;
+    divHTMLOutput += "</table>";
+    return divHTMLOutput;
 }

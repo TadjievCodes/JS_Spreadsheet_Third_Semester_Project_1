@@ -14,7 +14,7 @@ for (var i = 0; i < TBLROWS; i++) {
 }
 console.log(tableArray);
 
-//Formula to 
+// Formula to split a string into an array of substrings
 function getFormula(tbValue) {
     var pattern = /[:|\(|\)]/;
     // The split() method is used to split a string into an array of substrings, and returns the new array.
@@ -24,8 +24,8 @@ function getFormula(tbValue) {
     if (ar.length < 3) return null;else if (sum !== "=SUM") return null;else return ar;
 }
 
-//recalculate values
-function recalculate() {
+// recalculateValues values
+function recalculateValues() {
     for (var i = 0; i < TBLROWS; i++) {
         for (var j = 0; j < TBLCOLUMNS; j++) {
             // check to see if table element is a formula
@@ -36,7 +36,7 @@ function recalculate() {
     }
 }
 
-//function calculate
+// function calculate
 function calculateCell(row, column) {
     var tokenArray = getFormula(tableArray[row][column]);
 
@@ -67,7 +67,7 @@ function calculateCell(row, column) {
     }
 }
 
-//is float
+// is float
 function isFloat(s) {
     var ch = "";
     var justFloat = "0123456789.";

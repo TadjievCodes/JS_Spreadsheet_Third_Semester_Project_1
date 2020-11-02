@@ -1,4 +1,4 @@
-//function clikc the enter
+// function cliCK the enter
 function clickEnter(ref){
     if (window.event.keyCode === 13){
         let tableValue = document.getElementById(ref.id).value;
@@ -6,19 +6,19 @@ function clickEnter(ref){
         // put the index into array here
         tableArray[GLOBALROW - 1][GLOBALCOLLUMN - 1] = tableValue;
         calculateCell(GLOBALROW - 1, GLOBALCOLLUMN - 1);
-        recalculate();
+        recalculateValues();
     }
 }
-function clickCell(clickCell) {
-    //get the cell id
+function clickCells(clickCell) {
+    // get the cell id
     let cellId = clickCell.id;
     console.log(cellId);
-    var indexOfCell = clickCell.id.split('_');
-    indexOfCell[0] = parseInt(indexOfCell[0]);
-    indexOfCell[1] = parseInt(indexOfCell[1]);
-    cellInd = indexOfCell;
-    GLOBALROW = indexOfCell[0];
-    GLOBALCOLLUMN = indexOfCell[1];
+    let indexOfCells = clickCell.id.split('_');
+    indexOfCells[0] = parseInt(indexOfCells[0]);
+    indexOfCells[1] = parseInt(indexOfCells[1]);
+    cellInd = indexOfCells;
+    GLOBALROW = indexOfCells[0];
+    GLOBALCOLLUMN = indexOfCells[1];
     //change the color of the clicked cell
     clickCell.style.backgroundColor = "#a4cffc";
     //output the value to the input field
